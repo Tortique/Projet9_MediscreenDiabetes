@@ -26,7 +26,7 @@ public class PatientNoteReaderTest {
         patientNoteList.add(new PatientNote(uuid, "taille"));
         patientNoteList.add(new PatientNote(uuid, "bonjour"));
 
-        List<String> result = patientNoteReader.NoteReader(patientNoteList);
+        List<String> result = patientNoteReader.noteReader(patientNoteList);
         System.out.println(result);
         assertEquals(2, result.size());
     }

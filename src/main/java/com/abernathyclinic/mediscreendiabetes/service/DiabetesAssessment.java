@@ -3,18 +3,17 @@ package com.abernathyclinic.mediscreendiabetes.service;
 import com.abernathyclinic.mediscreendiabetes.domain.DiabetesAssessmentResult;
 import com.abernathyclinic.mediscreendiabetes.domain.DiabetesReport;
 import com.abernathyclinic.mediscreendiabetes.domain.PatientAndNotes;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class DiabetesAssessment {
 
-    private AgeCalculator ageCalculator = new AgeCalculator();
-    private PatientNoteReader patientNoteReader = new PatientNoteReader();
+    private final AgeCalculator ageCalculator = new AgeCalculator();
+    private final PatientNoteReader patientNoteReader = new PatientNoteReader();
 
     public DiabetesReport getDiabetesReport(PatientAndNotes patientAndNotes) {
         int age = ageCalculator.getAge(patientAndNotes.getPatient().getDateOfBirth());
-        int triggers = patientNoteReader.NoteReader(patientAndNotes.getPatientNote()).size();
+        int triggers = patientNoteReader.noteReader(patientAndNotes.getPatientNote()).size();
         DiabetesAssessmentResult diabetesAssessmentResult = DiabetesAssessmentResult.NONE;
         String gender = patientAndNotes.getPatient().getGender();
 

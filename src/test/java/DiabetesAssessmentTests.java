@@ -71,6 +71,7 @@ public class DiabetesAssessmentTests {
         patientNoteList.add(new PatientNote(uuid, "fumeur"));
         patientNoteList.add(new PatientNote(uuid, "microalbumine"));
         patientNoteList.add(new PatientNote(uuid, "Vertige"));
+        patientNoteList.add(new PatientNote(uuid, "anormal"));
         PatientAndNotes patientAndNotes = new PatientAndNotes(patient, patientNoteList);
 
         DiabetesReport diabetesReport = diabetesAssessment.getDiabetesReport(patientAndNotes);
