@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Integration.PatientControllerIT" tests="5" skipped="0" failures="0" errors="0" timestamp="2021-07-12T14:05:39" hostname="DESKTOP-NQCJ011" time="0.103">
+  <properties/>
+  <testcase name="addNewPatient()" classname="Integration.PatientControllerIT" time="0.022"/>
+  <testcase name="getAllPatients()" classname="Integration.PatientControllerIT" time="0.02"/>
+  <testcase name="getPatientByIdTest()" classname="Integration.PatientControllerIT" time="0.018"/>
+  <testcase name="getPatientByName()" classname="Integration.PatientControllerIT" time="0.016"/>
+  <testcase name="updatePatient()" classname="Integration.PatientControllerIT" time="0.023"/>
+  <system-out><![CDATA[2021-07-12 16:05:38.444  INFO 9748 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [Integration.PatientControllerIT]: no resource found for suffixes {-context.xml, Context.groovy}.
+2021-07-12 16:05:38.447  INFO 9748 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2021-07-12 16:05:38.448  INFO 9748 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@2a2416a7, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7c2ea62c, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@1270ab2f, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@7f3bb8a0, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@75a008ce, org.springframework.test.context.support.DirtiesContextTestExecutionListener@7cb6df90, org.springframework.test.context.event.EventPublishingTestExecutionListener@6b882afa, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@49d46193, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@3c47e61f, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@76c7e458, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@5c32cf80, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@3680e56c, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@35748abd]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.4.5)
+
+2021-07-12 16:05:38.634  INFO 9748 --- [    Test worker] Integration.PatientControllerIT          : Starting PatientControllerIT using Java 1.8.0_265 on DESKTOP-NQCJ011 with PID 9748 (started by adrie in C:\Users\adrie\Desktop\OC-Projet\Projet9_MediscreenDiabetes)
+2021-07-12 16:05:38.634  INFO 9748 --- [    Test worker] Integration.PatientControllerIT          : No active profile set, falling back to default profiles: default
+2021-07-12 16:05:39.614  INFO 9748 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-07-12 16:05:39.823  INFO 9748 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2021-07-12 16:05:39.823  INFO 9748 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2021-07-12 16:05:39.824  INFO 9748 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2021-07-12 16:05:39.926  INFO 9748 --- [    Test worker] Integration.PatientControllerIT          : Started PatientControllerIT in 1.476 seconds (JVM running for 11.443)
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/patient/addPatient
+       Parameters = {lastName=[lastName], firstName=[firstName], dateOfBirth=[dateOfBirth], gender=[gender], address=[address], phone=[phone]}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.abernathyclinic.mediscreendiabetes.controller.PatientController
+           Method = com.abernathyclinic.mediscreendiabetes.controller.PatientController#addNewPatient(String, String, String, String, String, String)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"text/plain;charset=UTF-8", Content-Length:"5"]
+     Content type = text/plain;charset=UTF-8
+             Body = Saved
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /api/patient/getAll
+       Parameters = {}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.abernathyclinic.mediscreendiabetes.controller.PatientController
+           Method = com.abernathyclinic.mediscreendiabetes.controller.PatientController#getAllPatients()
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = [{"id":"01584892-eeb4-4e03-a13e-2a166034759e","lastName":"Rees","firstName":"Pippa","dateOfBirth":"27/09/1952","gender":"F","address":"745 West Valley Farms Drive","phone":"628-423-0993"},{"id":"47d41ca3-5ff7-4249-93c9-d83702bee220","lastName":"lastName","firstName":"firstName","dateOfBirth":"dateOfBirth","gender":"gender","address":"address","phone":"phone"},{"id":"53a4a2ed-131e-4bb6-b9e1-c65522e6344c","lastName":"Wilson","firstName":"Claire","dateOfBirth":"31/12/1966","gender":"F","address":"12 Cobblestone St ","phone":"300-452-1091"},{"id":"6e81d713-ca71-479a-8d30-5001c02fd2bc","lastName":"Buckland ","firstName":"Max ","dateOfBirth":"24/06/1945","gender":"M","address":"193 Vale St ","phone":"833-534-0864"},{"id":"869817ac-0154-4936-a5f5-7491b377c4ef","lastName":"Ferguson","firstName":"Lucas","dateOfBirth":"22/06/1968","gender":"M ","address":"2 Warren Street ","phone":"387-866-1399"},{"id":"a5bd9ab3-9d84-437f-ac39-c8915c161826","lastName":"lastName","firstName":"firstName","dateOfBirth":"dateOfBirth","gender":"gender","address":"address","phone":"phone"},{"id":"aa400e08-457c-46fe-ab7f-ece1d0d7b580","lastName":"Bailey ","firstName":"Piers ","dateOfBirth":"28/06/1959","gender":"M","address":"1202 Bumble Dr ","phone":"747-815-0557"},{"id":"c3ae9b4f-6e19-4285-933f-8cd1dae7ee1c","lastName":"Ince ","firstName":"Wendy ","dateOfBirth":"29/06/1958","gender":"F","address":"4 Southampton Road ","phone":"802-911-9975"},{"id":"ca0bdb36-950a-4e62-a488-db924aa8d8e5","lastName":"lastName","firstName":"firstName","dateOfBirth":"dateOfBirth","gender":"gender","address":"address","phone":"phone"},{"id":"dcbde647-f332-4d80-9412-2db46439c4b7","lastName":"Arnold ","firstName":"Edward ","dateOfBirth":"11/11/1952","gender":"M","address":"599 East Garden Ave ","phone":"123-727-2779"},{"id":"eb6f5611-b845-44a1-a80b-a1ac7e2debb6","lastName":"lastName","firstName":"firstName","dateOfBirth":"dateOfBirth","gender":"gender","address":"address","phone":"phone"},{"id":"f6ccf8f5-8d98-45fd-b3e8-7c0db13b2de4","lastName":"Ross","firstName":"Tracey","dateOfBirth":"12/07/1949","gender":"F","address":"40 Sulphur Springs Dr","phone":"131-396-5049"},{"id":"f6fa53ac-8df0-4ff0-818c-179b3668e719","lastName":"Sharp ","firstName":"Anthony","dateOfBirth":"26/11/1946","gender":"M","address":"894 Hall Street","phone":"451-761-8383"},{"id":"fc6400f5-293a-42dc-bd1e-e7a7fc4c8aaf","lastName":"Clark ","firstName":"Natalie ","dateOfBirth":"18/06/1964","gender":"F","address":"12 Beechwood Road","phone":"241-467-9197"}]
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /api/patient/getById
+       Parameters = {id=[01584892-eeb4-4e03-a13e-2a166034759e]}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.abernathyclinic.mediscreendiabetes.controller.PatientController
+           Method = com.abernathyclinic.mediscreendiabetes.controller.PatientController#getPatientById(UUID)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"id":"01584892-eeb4-4e03-a13e-2a166034759e","lastName":"Rees","firstName":"Pippa","dateOfBirth":"27/09/1952","gender":"F","address":"745 West Valley Farms Drive","phone":"628-423-0993"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /api/patient/getByFirstNameAndLastName
+       Parameters = {firstName=[Pippa], lastName=[Rees]}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.abernathyclinic.mediscreendiabetes.controller.PatientController
+           Method = com.abernathyclinic.mediscreendiabetes.controller.PatientController#getPatientByName(String, String)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"id":"01584892-eeb4-4e03-a13e-2a166034759e","lastName":"Rees","firstName":"Pippa","dateOfBirth":"27/09/1952","gender":"F","address":"745 West Valley Farms Drive","phone":"628-423-0993"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = PUT
+      Request URI = /api/patient/updatePatient/eb6f5611-b845-44a1-a80b-a1ac7e2debb6
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", Content-Length:"97"]
+             Body = {"lastName": "lastName","firstName": "firstName","dateOfBirth": "dateOfBirth","gender": "gender"}
+    Session Attrs = {}
+
+Handler:
+             Type = com.abernathyclinic.mediscreendiabetes.controller.PatientController
+           Method = com.abernathyclinic.mediscreendiabetes.controller.PatientController#updatePatient(UUID, Patient)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"text/plain;charset=UTF-8", Content-Length:"15"]
+     Content type = text/plain;charset=UTF-8
+             Body = Patient updated
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

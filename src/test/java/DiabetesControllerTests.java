@@ -1,31 +1,19 @@
 import com.abernathyclinic.mediscreendiabetes.MediscreenDiabetes;
 import com.abernathyclinic.mediscreendiabetes.controller.DiabetesController;
-import com.abernathyclinic.mediscreendiabetes.domain.DiabetesReport;
 import com.abernathyclinic.mediscreendiabetes.domain.Patient;
-import com.abernathyclinic.mediscreendiabetes.domain.PatientAndNotes;
-import com.abernathyclinic.mediscreendiabetes.service.AgeCalculator;
-import com.abernathyclinic.mediscreendiabetes.service.DiabetesAssessment;
-import com.abernathyclinic.mediscreendiabetes.service.PatientNoteReader;
 import com.abernathyclinic.mediscreendiabetes.service.feignClients.MediscreenFeignClient;
 import com.abernathyclinic.mediscreendiabetes.service.feignClients.MediscreenNotesFeignClient;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
-import org.mockito.Mock;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureWebMvc;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
-import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
-import java.text.spi.DateFormatProvider;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.UUID;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -53,7 +41,7 @@ public class DiabetesControllerTests {
         when(mediscreenFeignClient.getPatientById(any(UUID.class))).thenReturn(new Patient("lastName", "firstName", "05/07/1980", "M", "address", "phone"));
         when(mediscreenNotesFeignClient.getPatientNoteByUuid(any(UUID.class))).thenReturn(new ArrayList<>());
 
-        MvcResult mvcResult = mockMvc.perform(get("/api/getAssessment?uuid=b42a8ef5-8baa-4bc2-89aa-d18cdc3239f8"))
+        MvcResult mvcResult = mockMvc.perform(get("/api/diabetes/getAssessment?uuid=b42a8ef5-8baa-4bc2-89aa-d18cdc3239f8"))
                 .andDo(print())
                 .andReturn();
         int status = mvcResult.getResponse().getStatus();

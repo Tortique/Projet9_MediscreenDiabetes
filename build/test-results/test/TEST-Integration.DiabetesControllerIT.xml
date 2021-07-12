@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Integration.DiabetesControllerIT" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-07-12T14:05:38" hostname="DESKTOP-NQCJ011" time="0.025">
+  <properties/>
+  <testcase name="getAssessmentTest()" classname="Integration.DiabetesControllerIT" time="0.025"/>
+  <system-out><![CDATA[2021-07-12 16:05:37.112  INFO 9748 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [Integration.DiabetesControllerIT]: no resource found for suffixes {-context.xml, Context.groovy}.
+2021-07-12 16:05:37.116  INFO 9748 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2021-07-12 16:05:37.118  INFO 9748 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@7d8e012, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@771133b3, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@773ead1a, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@155fb1d7, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@55471b1e, org.springframework.test.context.support.DirtiesContextTestExecutionListener@2b3526ae, org.springframework.test.context.event.EventPublishingTestExecutionListener@29e108af, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@41d8c54d, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@2caab983, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@2e28faee, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@f2d2bf4, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@85865f1, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@71c7a3d8]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.4.5)
+
+2021-07-12 16:05:37.313  INFO 9748 --- [    Test worker] Integration.DiabetesControllerIT         : Starting DiabetesControllerIT using Java 1.8.0_265 on DESKTOP-NQCJ011 with PID 9748 (started by adrie in C:\Users\adrie\Desktop\OC-Projet\Projet9_MediscreenDiabetes)
+2021-07-12 16:05:37.314  INFO 9748 --- [    Test worker] Integration.DiabetesControllerIT         : No active profile set, falling back to default profiles: default
+2021-07-12 16:05:38.193  INFO 9748 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-07-12 16:05:38.360  INFO 9748 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2021-07-12 16:05:38.360  INFO 9748 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2021-07-12 16:05:38.361  INFO 9748 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2021-07-12 16:05:38.413  INFO 9748 --- [    Test worker] Integration.DiabetesControllerIT         : Started DiabetesControllerIT in 1.291 seconds (JVM running for 9.929)
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /api/diabetes/getAssessment
+       Parameters = {uuid=[01584892-eeb4-4e03-a13e-2a166034759e]}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.abernathyclinic.mediscreendiabetes.controller.DiabetesController
+           Method = com.abernathyclinic.mediscreendiabetes.controller.DiabetesController#getDiabetesReportByUuid(UUID)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"lastName":"Rees","firstName":"Pippa","age":68,"diabetesAssessmentResult":"BORDERLINE"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

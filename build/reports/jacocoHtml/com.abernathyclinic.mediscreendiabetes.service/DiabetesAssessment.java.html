@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>DiabetesAssessment.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Projet9_MediscreenDiabetes</a> &gt; <a href="index.source.html" class="el_package">com.abernathyclinic.mediscreendiabetes.service</a> &gt; <span class="el_source">DiabetesAssessment.java</span></div><h1>DiabetesAssessment.java</h1><pre class="source lang-java linenums">package com.abernathyclinic.mediscreendiabetes.service;
+
+import com.abernathyclinic.mediscreendiabetes.domain.DiabetesAssessmentResult;
+import com.abernathyclinic.mediscreendiabetes.domain.DiabetesReport;
+import com.abernathyclinic.mediscreendiabetes.domain.PatientAndNotes;
+import org.springframework.stereotype.Service;
+
+@Service
+<span class="fc" id="L9">public class DiabetesAssessment {</span>
+
+<span class="fc" id="L11">    private final AgeCalculator ageCalculator = new AgeCalculator();</span>
+<span class="fc" id="L12">    private final PatientNoteReader patientNoteReader = new PatientNoteReader();</span>
+
+    public DiabetesReport getDiabetesReport(PatientAndNotes patientAndNotes) {
+<span class="fc" id="L15">        int age = ageCalculator.getAge(patientAndNotes.getPatient().getDateOfBirth());</span>
+<span class="fc" id="L16">        int triggers = patientNoteReader.noteReader(patientAndNotes.getPatientNote()).size();</span>
+<span class="fc" id="L17">        DiabetesAssessmentResult diabetesAssessmentResult = DiabetesAssessmentResult.NONE;</span>
+<span class="fc" id="L18">        String gender = patientAndNotes.getPatient().getGender();</span>
+
+<span class="fc bfc" id="L20" title="All 4 branches covered.">        if(triggers == 2 &amp;&amp; age &gt;30) {</span>
+<span class="fc" id="L21">            diabetesAssessmentResult = DiabetesAssessmentResult.BORDERLINE;</span>
+<span class="pc bpc" id="L22" title="7 of 16 branches missed.">        } else if(gender.equals(&quot;M&quot;) &amp;&amp; age &lt; 30 &amp;&amp; triggers &gt;= 5 || gender.equals(&quot;F&quot;) &amp;&amp; age &lt; 30 &amp;&amp; triggers &gt;= 7 || age &gt; 30 &amp;&amp; triggers &gt;= 8) {</span>
+<span class="fc" id="L23">            diabetesAssessmentResult = DiabetesAssessmentResult.EARLY_ONSET;</span>
+<span class="pc bpc" id="L24" title="7 of 16 branches missed.">        } else if(gender.equals(&quot;M&quot;) &amp;&amp; age &lt; 30 &amp;&amp; triggers &gt;= 3 || gender.equals(&quot;F&quot;) &amp;&amp; age &lt; 30 &amp;&amp; triggers &gt;= 4 || age &gt; 30 &amp;&amp; triggers == 6) {</span>
+<span class="fc" id="L25">            diabetesAssessmentResult = DiabetesAssessmentResult.IN_DANGER;</span>
+        }
+
+<span class="fc" id="L28">        return new DiabetesReport(patientAndNotes.getPatient().getLastName(), patientAndNotes.getPatient().getFirstName(), age, diabetesAssessmentResult);</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>

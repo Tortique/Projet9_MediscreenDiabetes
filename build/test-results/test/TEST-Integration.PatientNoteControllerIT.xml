@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Integration.PatientNoteControllerIT" tests="5" skipped="0" failures="0" errors="0" timestamp="2021-07-12T14:05:36" hostname="DESKTOP-NQCJ011" time="0.23">
+  <properties/>
+  <testcase name="getPatientNoteByUuidTest()" classname="Integration.PatientNoteControllerIT" time="0.128"/>
+  <testcase name="getAllPatientNotesTest()" classname="Integration.PatientNoteControllerIT" time="0.026"/>
+  <testcase name="getPatientNoteByIdTest()" classname="Integration.PatientNoteControllerIT" time="0.014"/>
+  <testcase name="addPatientNoteTest()" classname="Integration.PatientNoteControllerIT" time="0.038"/>
+  <testcase name="editPatientNoteTest()" classname="Integration.PatientNoteControllerIT" time="0.018"/>
+  <system-out><![CDATA[2021-07-12 16:05:35.277  INFO 9748 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [Integration.PatientNoteControllerIT]: no resource found for suffixes {-context.xml, Context.groovy}.
+2021-07-12 16:05:35.282  INFO 9748 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2021-07-12 16:05:35.284  INFO 9748 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@684fb361, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@16c91b65, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@3032721f, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@35a4a01c, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@20e5c972, org.springframework.test.context.support.DirtiesContextTestExecutionListener@7ea9fc38, org.springframework.test.context.event.EventPublishingTestExecutionListener@5da8cb78, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@4d1c2491, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@433cda19, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@72c5b67a, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@692d4051, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@45b9d949, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@60703ff5]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.4.5)
+
+2021-07-12 16:05:35.496  INFO 9748 --- [    Test worker] Integration.PatientNoteControllerIT      : Starting PatientNoteControllerIT using Java 1.8.0_265 on DESKTOP-NQCJ011 with PID 9748 (started by adrie in C:\Users\adrie\Desktop\OC-Projet\Projet9_MediscreenDiabetes)
+2021-07-12 16:05:35.497  INFO 9748 --- [    Test worker] Integration.PatientNoteControllerIT      : No active profile set, falling back to default profiles: default
+2021-07-12 16:05:36.611  INFO 9748 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-07-12 16:05:36.773  INFO 9748 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2021-07-12 16:05:36.773  INFO 9748 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2021-07-12 16:05:36.775  INFO 9748 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2021-07-12 16:05:36.864  INFO 9748 --- [    Test worker] Integration.PatientNoteControllerIT      : Started PatientNoteControllerIT in 1.576 seconds (JVM running for 8.38)
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /api/notes/getPatientNoteByUuid/eb6f5611-b845-44a1-a80b-a1ac7e2debb6
+       Parameters = {}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.abernathyclinic.mediscreendiabetes.controller.PatientNoteController
+           Method = com.abernathyclinic.mediscreendiabetes.controller.PatientNoteController#getPatientNoteByUuid(UUID)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = [{"id":null,"uuid":"eb6f5611-b845-44a1-a80b-a1ac7e2debb6","notes":"notes"}]
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /api/notes/getAll
+       Parameters = {}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.abernathyclinic.mediscreendiabetes.controller.PatientNoteController
+           Method = com.abernathyclinic.mediscreendiabetes.controller.PatientNoteController#getAllPatientNotes()
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = [{"id":null,"uuid":"869817ac-0154-4936-a5f5-7491b377c4ef","notes":"notesChanged"},{"id":null,"uuid":"869817ac-0154-4936-a5f5-7491b377c4ef","notes":"\"Le patient dÃ©clare qu'il se sent fatiguÃ© pendant la journÃ©e Il se plaint Ã©galement de douleurs musculaires Tests de laboratoire indiquant une microalbumine Ã©levÃ©e\""},{"id":null,"uuid":"869817ac-0154-4936-a5f5-7491b377c4ef","notes":"\"Le patient dÃ©clare qu'il ne se sent pas si fatiguÃ© que Ã§a Fumeur, il a arrÃªtÃ© dans les 12Â mois prÃ©cÃ©dents Tests de laboratoire indiquant que les anticorps sont Ã©levÃ©s\""},{"id":null,"uuid":"01584892-eeb4-4e03-a13e-2a166034759e","notes":"\"Le patient dÃ©clare qu'il ressent beaucoup de stress au travail Il se plaint Ã©galement que son audition est anormale derniÃ¨rement\""},{"id":null,"uuid":"01584892-eeb4-4e03-a13e-2a166034759e","notes":"\"Le patient dÃ©clare avoir fait une rÃ©action aux mÃ©dicaments au cours des 3Â derniers mois Il remarque Ã©galement que son audition continue d'Ãªtre anormale\""},{"id":null,"uuid":"01584892-eeb4-4e03-a13e-2a166034759e","notes":"Tests de laboratoire indiquant une microalbumine Ã©levÃ©e"},{"id":null,"uuid":"01584892-eeb4-4e03-a13e-2a166034759e","notes":"\"Le patient dÃ©clare que tout semble aller bien Le laboratoire rapporte que l'hÃ©moglobine A1C dÃ©passe le niveau recommandÃ© Le patient dÃ©clare quâ??il fume depuis longtemps\""},{"id":null,"uuid":"dcbde647-f332-4d80-9412-2db46439c4b7","notes":"Le patient dÃ©clare qu'il fume depuis peu"},{"id":null,"uuid":"dcbde647-f332-4d80-9412-2db46439c4b7","notes":"Tests de laboratoire indiquant une microalbumine Ã©levÃ©e"},{"id":null,"uuid":"dcbde647-f332-4d80-9412-2db46439c4b7","notes":"\"Le patient dÃ©clare qu'il est fumeur et qu'il a cessÃ© de fumer l'annÃ©e derniÃ¨re Il se plaint Ã©galement de crises dâ??apnÃ©e respiratoire anormales Tests de laboratoire indiquant un taux de cholestÃ©rol LDL Ã©levÃ©\""},{"id":null,"uuid":"dcbde647-f332-4d80-9412-2db46439c4b7","notes":"Tests de laboratoire indiquant un taux de cholestÃ©rol LDL Ã©levÃ©"},{"id":null,"uuid":"f6fa53ac-8df0-4ff0-818c-179b3668e719","notes":"\"Le patient dÃ©clare qu'il lui est devenu difficile de monter les escaliers Il se plaint Ã©galement dâ??Ãªtre essoufflÃ© Tests de laboratoire indiquant que les anticorps sont Ã©levÃ©s RÃ©action aux mÃ©dicaments\""},{"id":null,"uuid":"f6fa53ac-8df0-4ff0-818c-179b3668e719","notes":"Le patient dÃ©clare qu'il a mal au dos lorsqu'il reste assis pendant longtemps"},{"id":null,"uuid":"f6fa53ac-8df0-4ff0-818c-179b3668e719","notes":"\"Le patient dÃ©clare avoir commencÃ© Ã  fumer depuis peu HÃ©moglobine A1C supÃ©rieure au niveau recommandÃ©\""},{"id":null,"uuid":"c3ae9b4f-6e19-4285-933f-8cd1dae7ee1c","notes":"\"Le patient dÃ©clare avoir des douleurs au cou occasionnellement Le patient remarque Ã©galement que certains aliments ont un goÃ»t diffÃ©rent RÃ©action apparente aux mÃ©dicaments Poids corporel supÃ©rieur au poids recommandÃ©\""},{"id":null,"uuid":"c3ae9b4f-6e19-4285-933f-8cd1dae7ee1c","notes":"\"Le patient dÃ©clare avoir eu plusieurs Ã©pisodes de vertige depuis la derniÃ¨re visite. Taille incluse dans la fourchette concernÃ©e\""},{"id":null,"uuid":"c3ae9b4f-6e19-4285-933f-8cd1dae7ee1c","notes":"\"Le patient dÃ©clare qu'il souffre encore de douleurs cervicales occasionnelles Tests de laboratoire indiquant une microalbumine Ã©levÃ©e Fumeur, il a arrÃªtÃ© dans les 12Â mois prÃ©cÃ©dents\""},{"id":null,"uuid":"c3ae9b4f-6e19-4285-933f-8cd1dae7ee1c","notes":"\"Le patient dÃ©clare avoir eu plusieurs Ã©pisodes de vertige depuis la derniÃ¨re visite. Tests de laboratoire indiquant que les anticorps sont Ã©levÃ©s\""},{"id":null,"uuid":"f6ccf8f5-8d98-45fd-b3e8-7c0db13b2de4","notes":"\"Le patient dÃ©clare qu'il se sent bien Poids corporel supÃ©rieur au poids recommandÃ©\""},{"id":null,"uuid":"f6ccf8f5-8d98-45fd-b3e8-7c0db13b2de4","notes":"Le patient dÃ©clare qu'il se sent bien"},{"id":null,"uuid":"53a4a2ed-131e-4bb6-b9e1-c65522e6344c","notes":"\"Le patient dÃ©clare qu'il se rÃ©veille souvent avec une raideur articulaire Il se plaint Ã©galement de difficultÃ©s pour sâ??endormir Poids corporel supÃ©rieur au poids recommandÃ© Tests de laboratoire indiquant un taux de cholestÃ©rol LDL Ã©levÃ©\""},{"id":null,"uuid":"6e81d713-ca71-479a-8d30-5001c02fd2bc","notes":"\"Les tests de laboratoire indiquent que les anticorps sont Ã©levÃ©s HÃ©moglobine A1C supÃ©rieure au niveau recommandÃ©\""},{"id":null,"uuid":"fc6400f5-293a-42dc-bd1e-e7a7fc4c8aaf","notes":"\"Le patient dÃ©clare avoir de la difficultÃ© Ã  se concentrer sur ses devoirs scolaires HÃ©moglobine A1C supÃ©rieure au niveau recommandÃ©\""},{"id":null,"uuid":"fc6400f5-293a-42dc-bd1e-e7a7fc4c8aaf","notes":"\"Le patient dÃ©clare qu'il sâ??impatiente facilement en cas dâ??attente prolongÃ©e Il signale Ã©galement que les produits du distributeur automatique ne sont pas bons Tests de laboratoire signalant des taux anormaux de cellules sanguines\""},{"id":null,"uuid":"fc6400f5-293a-42dc-bd1e-e7a7fc4c8aaf","notes":"\"Le patient signale qu'il est facilement irritÃ© par des broutilles Il dÃ©clare Ã©galement que l'aspirateur des voisins fait trop de bruit Tests de laboratoire indiquant que les anticorps sont Ã©levÃ©s\""},{"id":null,"uuid":"aa400e08-457c-46fe-ab7f-ece1d0d7b580","notes":"Le patient dÃ©clare qu'il n'a aucun problÃ¨me"},{"id":null,"uuid":"aa400e08-457c-46fe-ab7f-ece1d0d7b580","notes":"\"Le patient dÃ©clare qu'il n'a aucun problÃ¨me Taille incluse dans la fourchette concernÃ©e HÃ©moglobine A1C supÃ©rieure au niveau recommandÃ©\""},{"id":null,"uuid":"aa400e08-457c-46fe-ab7f-ece1d0d7b580","notes":"\"Le patient dÃ©clare qu'il n'a aucun problÃ¨me Poids corporel supÃ©rieur au poids recommandÃ© Le patient a signalÃ© plusieurs Ã©pisodes de vertige depuis sa derniÃ¨re visite\""},{"id":null,"uuid":"aa400e08-457c-46fe-ab7f-ece1d0d7b580","notes":"\"Le patient dÃ©clare qu'il n'a aucun problÃ¨me Tests de laboratoire indiquant une microalbumine Ã©levÃ©e\""},{"id":null,"uuid":"f3b3aaac-f833-473b-a73f-337a08527e37","notes":"new Note"},{"id":null,"uuid":"24d21b2e-1ce5-4275-a421-a6a739b34d9e","notes":"new Note"},{"id":null,"uuid":"7bb1cc85-cc8b-4233-84eb-8e7d9cc7a604","notes":"new Note"},{"id":null,"uuid":"24a491e3-c542-4ae4-89dc-1901330f448b","notes":"new Note"},{"id":null,"uuid":"e21cd74b-985b-45cc-82fe-c621e051b9de","notes":"new Note"},{"id":null,"uuid":"952a206c-0386-42bf-b35f-d01b82452a9a","notes":"new Note"},{"id":null,"uuid":"2076ace4-2354-4611-8733-da3f355e6863","notes":"new Note"},{"id":null,"uuid":"c63634dc-9ca8-4a45-a12c-8110b9ece817","notes":"new Note"},{"id":null,"uuid":"bd6ade6d-1d7a-49af-a1e0-0aa604157115","notes":"new Note"},{"id":null,"uuid":"9f24ca10-dadd-4a7f-b56c-8403ba877d80","notes":"new Note"},{"id":null,"uuid":"806d1211-e9c0-42c9-a9e6-f92a58fa21b1","notes":"new Note"},{"id":null,"uuid":"f6513fe0-f51f-45ba-8d64-3912b9b9b794","notes":"new Note"},{"id":null,"uuid":"39f245c1-3063-4c4a-bb9d-22b93196cca8","notes":"new Note"},{"id":null,"uuid":"eb6f5611-b845-44a1-a80b-a1ac7e2debb6","notes":"notes"}]
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /api/notes/getPatientNoteById/60df28b3bcb60970ca4dccda
+       Parameters = {}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.abernathyclinic.mediscreendiabetes.controller.PatientNoteController
+           Method = com.abernathyclinic.mediscreendiabetes.controller.PatientNoteController#getPatientNoteById(String)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"id":null,"uuid":"869817ac-0154-4936-a5f5-7491b377c4ef","notes":"notesChanged"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/notes/addPatientNote
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", Content-Length:"64"]
+             Body = {"uuid": "eb6f5611-b845-44a1-a80b-a1ac7e2debb6","notes":"notes"}
+    Session Attrs = {}
+
+Handler:
+             Type = com.abernathyclinic.mediscreendiabetes.controller.PatientNoteController
+           Method = com.abernathyclinic.mediscreendiabetes.controller.PatientNoteController#addPatientNote(PatientNote)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"text/plain;charset=UTF-8", Content-Length:"21"]
+     Content type = text/plain;charset=UTF-8
+             Body = Patient's notes saved
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = PUT
+      Request URI = /api/notes/editPatientNote/60df28b3bcb60970ca4dccda
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", Content-Length:"71"]
+             Body = {"uuid": "eb6f5611-b845-44a1-a80b-a1ac7e2debb6","notes":"notesChanged"}
+    Session Attrs = {}
+
+Handler:
+             Type = com.abernathyclinic.mediscreendiabetes.controller.PatientNoteController
+           Method = com.abernathyclinic.mediscreendiabetes.controller.PatientNoteController#editPatientNote(String, PatientNote)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"text/plain;charset=UTF-8", Content-Length:"23"]
+     Content type = text/plain;charset=UTF-8
+             Body = Patient's notes updated
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,62 @@
+version: "3.9"
+
+services:
+
+  mediscreen:
+    container_name: mediscreen_
+    image: mediscreen
+    build: ../Projet9_Mediscreen/MediscreenContainer
+    restart: always
+    network_mode: host
+    expose:
+      - 8080
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://localhost:3307/abernathyclinic?serverTimeZone=Europe/Paris
+      SPRING_DATASOURCE_DRIVER_CLASS_NAME: com.mysql.cj.jdbc.Driver
+    depends_on:
+      - db
+
+  db:
+    restart: always
+    container_name: my-sql
+    image: mysql:5.7
+    build: ../Projet9_Mediscreen/MySQLContainer
+    network_mode: bridge
+    ports:
+      - 3307:3306
+    expose:
+      - '3307'
+    environment:
+      MYSQL_ROOT_PASSWORD: rootroot
+      MYSQL_DATABASE: abernathyclinic
+      MYSQL_PASSWORD: rootroot
+
+  mediscreennotes:
+    container_name: mediscreen-notes
+    image: mediscreennotes
+    build: ../Projet9_MediscreenNotes/MediscreenNotesContainer
+    restart: always
+    network_mode: host
+    depends_on:
+      - mongodb
+
+  mongodb:
+    container_name: mongodb
+    image: mongo
+    restart: always
+    network_mode: bridge
+    ports:
+       - 27017:27017
+    volumes:
+      - mongo-volume:/data/db
+
+  mediscreendiabetes:
+    container_name: mediscreendiabetes
+    image: mediscreendiabetes
+    build: ../Projet9_MediscreenDiabetes/MediscreenDiabetesContainer
+    network_mode: host
+
+volumes:
+  database-volume:
+  mongo-volume:
+

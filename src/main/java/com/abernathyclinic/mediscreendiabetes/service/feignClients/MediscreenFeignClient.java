@@ -9,20 +9,20 @@ import java.util.UUID;
 @FeignClient(name = "mediscreen", url = "localhost:8080")
 public interface MediscreenFeignClient {
 
-    @GetMapping("/api/getAll")
+    @GetMapping("/api/patient/getAll")
     Iterable<Patient> getAllPatients();
 
-    @GetMapping("/api/getById")
+    @GetMapping("/api/patient/getById")
     Patient getPatientById(@RequestParam UUID id);
 
-    @GetMapping("/api/getByFirstNameAndLastName")
+    @GetMapping("/api/patient/getByFirstNameAndLastName")
     Patient getPatientByName(@RequestParam String firstName, @RequestParam String lastName);
 
-    @PostMapping("/api/addPatient")
+    @PostMapping("/api/patient/addPatient")
     String addNewPatient(@RequestParam String lastName, @RequestParam String firstName,
                          @RequestParam String dateOfBirth, @RequestParam String gender,
                          @RequestParam String address, @RequestParam String phone);
 
-    @PutMapping("/api/updatePatient/{id}")
+    @PutMapping("/api/patient/updatePatient/{id}")
     String updatePatient(@PathVariable("id") UUID id,@RequestBody Patient patient);
 }

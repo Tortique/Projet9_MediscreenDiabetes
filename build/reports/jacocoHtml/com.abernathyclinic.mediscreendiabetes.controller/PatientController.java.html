@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>PatientController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Projet9_MediscreenDiabetes</a> &gt; <a href="index.source.html" class="el_package">com.abernathyclinic.mediscreendiabetes.controller</a> &gt; <span class="el_source">PatientController.java</span></div><h1>PatientController.java</h1><pre class="source lang-java linenums">package com.abernathyclinic.mediscreendiabetes.controller;
+
+import com.abernathyclinic.mediscreendiabetes.domain.Patient;
+import com.abernathyclinic.mediscreendiabetes.service.feignClients.MediscreenFeignClient;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.UUID;
+
+@RestController
+@RequestMapping(&quot;/api/patient&quot;)
+<span class="fc" id="L12">public class PatientController {</span>
+
+    @Autowired
+    private MediscreenFeignClient mediscreenFeignClient;
+
+
+    @PostMapping(&quot;/addPatient&quot;)
+    public @ResponseBody
+    String addNewPatient(@RequestParam String lastName, @RequestParam String firstName,
+                         @RequestParam String dateOfBirth, @RequestParam String gender,
+                         @RequestParam String address, @RequestParam String phone) {
+<span class="fc" id="L23">        return mediscreenFeignClient.addNewPatient(lastName, firstName, dateOfBirth, gender, address, phone);</span>
+    }
+
+    @GetMapping(&quot;/getAll&quot;)
+    public @ResponseBody
+    Iterable&lt;Patient&gt; getAllPatients() {
+<span class="fc" id="L29">        return mediscreenFeignClient.getAllPatients();</span>
+    }
+
+    @GetMapping(&quot;/getById&quot;)
+    public Patient getPatientById(@RequestParam UUID id) {
+<span class="fc" id="L34">        return mediscreenFeignClient.getPatientById(id);</span>
+    }
+
+    @GetMapping(&quot;/getByFirstNameAndLastName&quot;)
+    public Patient getPatientByName(@RequestParam String firstName, @RequestParam String lastName) {
+<span class="fc" id="L39">        return mediscreenFeignClient.getPatientByName(firstName, lastName);</span>
+    }
+
+    @PutMapping(&quot;/updatePatient/{id}&quot;)
+    public @ResponseBody
+    String updatePatient(@PathVariable(&quot;id&quot;) UUID id, @RequestBody Patient patient) {
+<span class="fc" id="L45">        return mediscreenFeignClient.updatePatient(id, patient);</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>

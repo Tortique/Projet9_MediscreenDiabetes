@@ -1,0 +1,32 @@
+com/abernathyclinic/mediscreendiabetes/controller/webController/HomeWebController.java
+ com.abernathyclinic.mediscreendiabetes.controller.webController.HomeWebController
+com/abernathyclinic/mediscreendiabetes/service/AgeCalculator.java
+ com.abernathyclinic.mediscreendiabetes.service.AgeCalculator
+com/abernathyclinic/mediscreendiabetes/MediscreenDiabetes.java
+ com.abernathyclinic.mediscreendiabetes.MediscreenDiabetes
+com/abernathyclinic/mediscreendiabetes/domain/PatientAndNotes.java
+ com.abernathyclinic.mediscreendiabetes.domain.PatientAndNotes
+com/abernathyclinic/mediscreendiabetes/service/DiabetesAssessment.java
+ com.abernathyclinic.mediscreendiabetes.service.DiabetesAssessment
+com/abernathyclinic/mediscreendiabetes/service/PatientNoteReader.java
+ com.abernathyclinic.mediscreendiabetes.service.PatientNoteReader
+com/abernathyclinic/mediscreendiabetes/domain/DiabetesAssessmentResult.java
+ com.abernathyclinic.mediscreendiabetes.domain.DiabetesAssessmentResult
+com/abernathyclinic/mediscreendiabetes/domain/Patient.java
+ com.abernathyclinic.mediscreendiabetes.domain.Patient
+com/abernathyclinic/mediscreendiabetes/domain/PatientNote.java
+ com.abernathyclinic.mediscreendiabetes.domain.PatientNote
+com/abernathyclinic/mediscreendiabetes/domain/DiabetesReport.java
+ com.abernathyclinic.mediscreendiabetes.domain.DiabetesReport
+com/abernathyclinic/mediscreendiabetes/service/feignClients/MediscreenNotesFeignClient.java
+ com.abernathyclinic.mediscreendiabetes.service.feignClients.MediscreenNotesFeignClient
+com/abernathyclinic/mediscreendiabetes/service/feignClients/MediscreenFeignClient.java
+ com.abernathyclinic.mediscreendiabetes.service.feignClients.MediscreenFeignClient
+com/abernathyclinic/mediscreendiabetes/controller/webController/DiabetesWebController.java
+ com.abernathyclinic.mediscreendiabetes.controller.webController.DiabetesWebController
+com/abernathyclinic/mediscreendiabetes/controller/DiabetesController.java
+ com.abernathyclinic.mediscreendiabetes.controller.DiabetesController
+com/abernathyclinic/mediscreendiabetes/controller/PatientNoteController.java
+ com.abernathyclinic.mediscreendiabetes.controller.PatientNoteController
+com/abernathyclinic/mediscreendiabetes/controller/PatientController.java
+ com.abernathyclinic.mediscreendiabetes.controller.PatientController
